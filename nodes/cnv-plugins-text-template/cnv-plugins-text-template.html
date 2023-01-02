@@ -1,0 +1,60 @@
+
+<script type="text/javascript">
+
+  RED.nodes.registerType("cnv-plugins-text-template", {
+    category: "conversation template",
+    color: "#a6ddff",
+    defaults: {
+      name: { value: "" },
+      text: { required: true },
+      delay: { value: 1 },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "envelope.svg",
+    label: function () {
+      return `cnv-plugins-template/text\\n ${this.name || 'text'}`;
+    },
+    oneditprepare: function() {
+
+        var simplemde = new SimpleMDE({ element: document.getElementById("node-input-text"), forceSync: true });
+
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="cnv-plugins-text-template">
+  <h3>Node properties</h1>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Title</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+
+  <hr />
+
+  <h3>Data properties</h3>
+
+  <br/>
+
+
+  <div class="form-row">
+    <label for="node-input-delay"><i class="fa fa-tag"></i> Delay</label>
+    <input type="number" id="node-input-delay" placeholder="Delay">
+  </div>
+  <br/>
+
+  <br/>
+
+
+
+  <div class="form-row">
+    <label for="node-input-text"><i class="fa fa-tag"></i> Text</label>
+    <textarea type="text" id="node-input-text" placeholder="Text"></textarea>
+  </div>
+
+
+</script>
+
+<script type="text/html" data-help-name="cnv-plugins-text-template">
+  <p>Node for sending text</p>
+</script>
