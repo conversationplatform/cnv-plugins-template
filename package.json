@@ -2,7 +2,7 @@
   "name": "@cnv-platform/cnv-plugins-template",
   "version": "1.0.2",
   "description": "OpenSource TinyMe plugins",
-  "repository": "VisualVest-GmbH/cnv-plugins-template",
+  "repository": "conversationplatform/cnv-plugins-template",
   "scripts": {
     "build": "rollup -c"
   },
